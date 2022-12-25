@@ -16,7 +16,13 @@
 		step = 1, stepTimes = [1000,1000,2000,2000];
 
 	function init() {
-		box.addEventListener( 'click', runAnimation );
+		box.addEventListener( 'click', runAnyOne );
+		
+	}
+
+	function runAnyOne() {
+		document.getElementById("audio-play").play();
+		runAnimation();
 	}
 
 	function runAnimation() {
@@ -34,7 +40,7 @@
 		}
 		setTimeout(function() { runAnimation(); }, stepTimes[ step - 1 ] );
 		++step;
-		document.getElementById("audio-play").play();
+		
 	}
 
 	function incStep( step ) {
