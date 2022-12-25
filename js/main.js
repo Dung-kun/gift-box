@@ -34,6 +34,7 @@
 		}
 		setTimeout(function() { runAnimation(); }, stepTimes[ step - 1 ] );
 		++step;
+		document.getElementById("audio-play").play();
 	}
 
 	function incStep( step ) {
